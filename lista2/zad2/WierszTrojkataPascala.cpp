@@ -4,14 +4,7 @@
 
 using namespace std;
 
-// class WierszTrojkataPascala{
-//     public:
-//         WierszTrojkataPascala(int n); // constructor
-//         int wspolczynnik(int m);
 
-//         std::vector<int> TriangleRow;
-
-// };
 
 WierszTrojkataPascala::WierszTrojkataPascala(int n){
     TriangleRow.push_back(1);
