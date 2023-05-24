@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="myMainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <Pane fx:id="myPaintingPane" layoutY="52.0" prefHeight="549.0" prefWidth="800.0" style="-fx-background-color: white;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Pane>
+      <MenuBar fx:id="myMenuBar" layoutY="1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="800.0" scaleShape="false">
+        <menus>
+          <Menu fx:id="myMenuFile" mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="myCloseButton" mnemonicParsing="false" text="Close" />
+                  <MenuItem fx:id="mySaveButton" mnemonicParsing="false" text="Save" />
+               </items>
+          </Menu>
+          <Menu fx:id="myMenuInfo" mnemonicParsing="false" text="Info">
+            <items>
+                  <MenuItem fx:id="myAboutButton" mnemonicParsing="false" onAction="#AboutAlert" text="About" />
+              <MenuItem fx:id="MyInstructionButton" mnemonicParsing="false" onAction="#InstructionAlert" text="Instruction" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox fx:id="myHBox" alignment="TOP_CENTER" layoutY="28.0" maxWidth="1.7976931348623157E308" prefHeight="4.0" prefWidth="800.0" spacing="2.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <Button fx:id="myRectangleButton" mnemonicParsing="false" onAction="#RectangleClicked" prefHeight="24.0" prefWidth="150.0" text="Rectangle" />
+            <Button fx:id="myPolygonButton" mnemonicParsing="false" onAction="#PolygonClicked" prefHeight="24.0" prefWidth="150.0" text="Polygon" />
+            <Button fx:id="myCircleButton" mnemonicParsing="false" onAction="#CircleClicked" prefHeight="24.0" prefWidth="150.0" text="Circle" />
+            <CheckBox fx:id="myMoveBox" mnemonicParsing="false" onAction="#MoveClicked" text="Move" />
+            <CheckBox fx:id="myRotateBox" mnemonicParsing="false" onAction="#RotateClicked" text="Rotate" />
+            <CheckBox fx:id="myResizeBox" mnemonicParsing="false" onAction="#ResizeClicked" text="Resize" />
+         </children>
+      </HBox>
+   </children>
+</Pane>
