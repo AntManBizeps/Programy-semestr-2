@@ -24,27 +24,7 @@ public class Square extends Rectangle {
         return myMutex;
     }
 
-    // public synchronized void changeThread(){
-    //     isPaused = !isPaused;
-    //     notify();
-    // }
 
-    // public synchronized void pauseThread() {
-    //     isPaused = true;
-    //     }
-    
-    // public synchronized void resumeThread() {
-    //     isPaused = false;
-    //     notify(); // Wznawianie wątku
-    // }
-    
-    // public synchronized boolean getPauseValue(){
-    //     return isPaused;
-    // }
-
-    // public synchronized void setPauseValue(boolean value){
-    //     isPaused = value;
-    // }
 
     public Square(double p, double width, double height){
         this.p = p;
