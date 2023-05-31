@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="myPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <TextField fx:id="myM" layoutX="327.0" layoutY="101.0" prefHeight="24.0" prefWidth="49.0" />
+      <TextField fx:id="myN" layoutX="327.0" layoutY="135.0" prefHeight="24.0" prefWidth="49.0" />
+      <TextField fx:id="myK" layoutX="327.0" layoutY="168.0" prefHeight="24.0" prefWidth="49.0" />
+      <TextField fx:id="myP" layoutX="327.0" layoutY="200.0" prefHeight="24.0" prefWidth="49.0" />
+      <Text layoutX="291.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="m:" />
+      <Text layoutX="291.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="n:" />
+      <Text layoutX="291.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="k:" />
+      <Text layoutX="291.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p:" />
+      <Text layoutX="276.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="wybierz parametry" wrappingWidth="151.7294921875" />
+      <Text layoutX="399.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="l. rzędów" />
+      <Text layoutX="398.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="l. kolumn" />
+      <Text layoutX="397.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="współczynnik opóżnienia" />
+      <Text layoutX="397.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="prawdopodobieństwo (0;1)" />
+      <Button fx:id="mySubmitButton" layoutX="321.0" layoutY="241.0" mnemonicParsing="false" onAction="#SubmitClicked" text="Submit" />
+   </children>
+</Pane>
