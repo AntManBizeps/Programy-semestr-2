@@ -64,23 +64,14 @@ public class NewBoard extends Controller {
             // Dodanie elementów do siatki
             for (int row = 0; row < m; row++) {
                 for (int col = 1; col <= n; col++) {
-                    //Label label = new Label((row) + ", " + (col));
-                    // Rectangle rectangle = new Rectangle();
-                    // rectangle.setWidth(50);
-                    // rectangle.setHeight(50);
-                    // rectangle.setStroke(Color.PURPLE);
-                    //rectangle.setOnMouseClicked(OnMousePressedEventHandler);
+
                     Square square = new Square(p, width, height);
                     MyThreadThing myThreadThing = new MyThreadThing(square, k, mutex);
                     square.squareThreadThing = myThreadThing;
                     square.setSqThreadThing(myThreadThing);
                     myThreadThing.count = row*m + col;
                     myThreadThing.start();
-                    
-                    //myThreadThing.join();
-                    //myThreadThing.setDaemon(stopThreads);
-                    //Platform.runLater(myThreadThing);
-                    
+         
                     myGridPane.add(myThreadThing.square.rectangle, col-1, row); // Dodanie etykiety do określonej komórki siatki
                     board.threadsChart[row][col-1] = myThreadThing;
                     board.squaresChart[row][col-1] = square;
@@ -98,13 +89,7 @@ public class NewBoard extends Controller {
 
                 }
             }
-            // for (int row = 0; row < m; row++){
-            //     for (int col = 0; col < n; col++){
-            //         board.threadsChart[row][col].start();
-            //         board.threadsChart[row][col].join();
-            //         board.threadsChart[row][col].setDaemon(stopThreads);
-            //     }
-            // }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
